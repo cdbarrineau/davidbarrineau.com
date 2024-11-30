@@ -1,0 +1,105 @@
+@import url('fonts/satoshi/css/satoshi.css');
+
+body {
+  font-family: Satoshi-Regular;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+#name {
+  font-size: 40px;
+}
+
+#title {
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.menu {
+  text-align: center;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item {
+  text-align: center;
+  line-height: 75px;
+  margin: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+hr.menu-rounded {
+  border-top: 2px solid #bbb;
+  border-radius: 5px;
+  width: 60%;
+  margin-bottom: 50px;
+}
+
+.center-text {
+  text-align: center; 
+}
+
+.top-content {
+  display: flex;
+}
+
+#profile-image {
+  border-radius: 30px;
+  width: 450px;
+}
+
+.bio-text {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 250px;
+}
+
+.social-icons {
+  float: right;
+  display: grid;
+  grid: auto;
+}
+
+.social-icon {
+  padding-bottom: 10px;
+}
+
+.linkedin-icon {
+  width: 50px;
+}
+
+.medium-icon {
+  width: 42px;
+}
+
+hr.rounded {
+  border-top: 2px solid #bbb;
+  border-radius: 5px;
+  width: 60%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#case-studies {
+  margin-top: 20px;
+}
+
+.case-studies-image {
+  width: 200px;
+}
+
+.case-study-item {
+  display: grid;
+  grid-template-columns: 15% 30%
+}
+
+.case-study-item-text {
+  margin-top: 50px;
+}
