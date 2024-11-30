@@ -2,6 +2,9 @@
 
 body {
   font-family: Satoshi-Regular;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: #a99e7c1a;
 }
 
 a:link, a:visited {
@@ -38,7 +41,7 @@ a:link, a:visited {
 hr.menu-rounded {
   border-top: 2px solid #bbb;
   border-radius: 5px;
-  width: 60%;
+  width: 70%;
   margin-bottom: 50px;
 }
 
@@ -82,7 +85,7 @@ hr.menu-rounded {
 hr.rounded {
   border-top: 2px solid #bbb;
   border-radius: 5px;
-  width: 60%;
+  width: 70%;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -102,4 +105,14 @@ hr.rounded {
 
 .case-study-item-text {
   margin-top: 50px;
+}
+
+.skills-test {
+  margin-left: 50px;
+  margin-right: 250px;
+}
+
+.certifications-text {
+  margin-left: 50px;
+  margin-right: 250px;
 }
