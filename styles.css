@@ -82,6 +82,10 @@ hr.menu-rounded {
   width: 42px;
 }
 
+.git-hub-icon {
+  width: 42px;
+}
+
 hr.rounded {
   border-top: 2px solid #bbb;
   border-radius: 5px;
@@ -100,14 +104,19 @@ hr.rounded {
 
 .case-study-item {
   display: grid;
-  grid-template-columns: 15% 30%
+  grid-template-columns: 15% 40%;
 }
 
 .case-study-item-text {
   margin-top: 50px;
+  margin-left: 50px;
 }
 
-.skills-test {
+.case-studies-content {
+  margin-right: 100px;
+}
+
+.skills-text {
   margin-left: 50px;
   margin-right: 250px;
 }
@@ -115,4 +124,68 @@ hr.rounded {
 .certifications-text {
   margin-left: 50px;
   margin-right: 250px;
+}
+
+.me-shuttle-img {
+  width: 100%;
+  /* width: 35%;
+  margin-right: 50px;
+  float: left; */
+}
+
+.shuttle-tank {
+  width: 100%;
+  /* margin-top: 50px;
+  width: 50%; */
+}
+
+.ksc-text {
+  margin-right: 50px;
+  padding-top: 40px;
+  padding-right: 70px;
+}
+
+.bottom-figure {
+  margin-right: 50px;
+  float: right;
+  width: 40%;
+}
+
+.coyote-figure {
+  margin-right: 50px;
+  float: left;
+  width: 40%;
+}
+
+.coyote-img {
+  width: 100%;
+  /* width: 35%;
+  margin-right: 50px;
+  float: left; */
+}
+
+.selfy-img {
+  /* margin-top: 50px; */
+  width: 100%;
+}
+
+.ft-riley-img {
+  width: 100%;
+}
+
+.ft-riley-figure {
+  margin-right: 50px;
+  float: left;
+  width: 30%;
+}
+
+.machine-gun-img {
+  /* margin-top: 50px; */
+  width: 100%;
+  /* width: 100%; */
+}
+
+.figcaption {
+  text-align: center;
+  width: 100%
 }
