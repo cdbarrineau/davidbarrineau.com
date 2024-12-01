@@ -45,9 +45,54 @@
           <figcaption class="figcaption">Buddy and me in the back of a truck loaded with equipment we use.  It was 118&deg; F that day!</figcaption>
         </figure>
         <div class="ksc-text">
-          My Content
+          <p>
+            The National Training Center (NTC), located at Ft. Irwin California, is the biggest training facility in the world.  It covers
+            over 1,000 square miles (2,600km<sup>2</sup>).  It is known for training full Battalions of soldiers at any given time.  Each
+            training exercise is known as a "rotation".  A rotation last four to five days and runs 24 hours a day.  There are multiple
+            parts to a rotation but the part I worked on was the live-fire part which is the most exciting.  This is where dismounted
+            soldiers, HMMWVs, Tanks, and even Aircraft all train at the same time, advancing on Opposing Force (OPFOR) targets.  Like
+            most targets in training on other ranges, these are mechanical devices that expose silhouettes for Soldiers to shoot at and
+            are scored on their shooting accuracy.  During the live-fire part of a rotation, personnel that run the Rotation for the Soldiers
+            are stationed in the middle of the desert in a single build called the "Bunker".  When contractors, which include Program 
+            Managers, engineers, etc. are on site, they have to stay at the Bunker the entire time, day and night as they close off roads
+            in fear that soldiers will mistake a civilian vehicle for a target and shoot at it.
+          </p>
+          <p>
+            I was assigned to a project that would replace a large amount of the software used to run the live-fire portion of the training.
+            The old system had become obsolete and was too much to maintain both financially and logistically.  We reused parts of 
+            <a href="tracr.html">TRACR</a> however, there was a lot of custom software to be written that NTC live-fire required.  I was
+            the sole person on this endeavor.  I was in charge of requirements gathering of what NTC needed, architecting, designing and
+            implementing the new solution.  Additionally, I was on site a lot for integration testing and all other formal government
+            testing.  (Yes, I spent a few rotations at the Bunker, sleeping in my rental truck when I could!)
+          </p>
+          <p>
+            The live-fire system I designed and implements consisted of multiple parts, both servers and clients.  I had to interface
+            to an existing CORBA implementation for some data, luckily I had CORA experience with my time at <a href="tracr.html">Kennedy Space Center</a>.
+            The new parts of the system I was able to use whatever I wanted to get the job done which again was client-server-based.  At the time
+            .NET C# was the predominate language used on the Product Line that this effort was under.  Therefore, the clients and back-end
+            processes were written in .NET C#.  There was also Java written on the server-side that was run in Wildfly application server.  Finally,
+            for event distribution, it was a combination of RabbitMQ and CORBA, depending on the sending and receiving components.  I used
+            PostgreSQL for the database as well as Hibernate for the ORM.
+          </p>
+          <p>
+            One of the biggest things to come out of the effort for the users of the system was a mobile solution.  Personnel that ran
+            the training would have to ride with the Commanding Officer(s) in HMMWVs while training was in full-swing.  These workers
+            on the ground had to have near-real-time feeds in the form of text and images rendered on a map as soldiers and targets
+            changed.  Initially the only form of wireless communication to these mobile solutions were via a UHF-band serial connection--
+            one connection for the hundreds of targets deployed in the training area.  Therefore, this solution had to be small and scale
+            very well.  Later, the Army paid for AT&T towers to be put in so that we could utilize cell signals for this communication
+            however, that was years after the initial deployment I did.
+          </p>
+          <p>
+            This solution lasted for over ten years until what the government calls a "tech-refresh" is being put into place utilizing
+            new technology and hardware.  No more CORBA!  Everything will be browser-based and all back-end components written in Java
+            and run in Spring Boot applications.
+          </p>
+          <p>
+            I'm glad to have played a big part in the decade that live-fire training occurred at the NTC.  I learned a lot about
+            how to architect large-scale systems, interfacing with existing systems, and met a lot of great people!
+          </p>
         </div>
-
         <figure class="bottom-figure">
           <img class="coyote-img" src="images/coyote.png">
           <figcaption class="figcaption">A Coyote - One of the many during a Rotation, they know the Soldiers will feed them!</figcaption>

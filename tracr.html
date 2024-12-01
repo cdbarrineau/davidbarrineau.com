@@ -46,9 +46,25 @@
           <figcaption class="figcaption">Ft. Riley KS - Hospital where I was born</figcaption>
         </figure>
         
-
         <div class="ksc-text">
-          TRACR Content
+          <p>
+            The Targetry Range Automated Control and Recording (TRACR) system is a light-weight soltion that has been in use for almost two 
+            decades.  It can be run on something as small as a Windows tablet and is extensible to be run as a full suite of plugins that
+            allow for desktop users to run video of the training, After Action Reviews (AAR), and Take Home Packages which is the video and
+            scoring data for their training exercise(s).
+          </p>
+          <p>
+            
+          </p>
+          <p>
+            TRACR was written in a time when CORBA was still prominent.  Therefore, all architecture bas based around CORBA.  TRACR is a 
+            monolith architecture because it was written to be run on small devices, all self-contained.  The only external source that
+            TRACR used was PostgreSQL.  The reason for CORBA was that one of the requirements is that it had to be compatible with a larger
+            Product Line which used CORBA.  Therefore, because we knew that we would never integrate our software components with the Product
+            Line, we were able to stub out a lot of the CORBA functionality along with Service Locator Provider (SLP) to all be localhost.  
+          </p>
+          
+
         </div>
 
         <figure class="bottom-figure">

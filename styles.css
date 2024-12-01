@@ -94,8 +94,14 @@ hr.rounded {
   margin-bottom: 50px;
 }
 
+
+
+
+
 #case-studies {
   margin-top: 20px;
+  /* display: grid; */
+  /* grid-template-columns: auto auto; */
 }
 
 .case-studies-image {
@@ -115,6 +121,12 @@ hr.rounded {
 .case-studies-content {
   margin-right: 100px;
 }
+
+
+
+
+
+
 
 .skills-text {
   margin-left: 50px;
@@ -143,6 +155,7 @@ hr.rounded {
   margin-right: 50px;
   padding-top: 40px;
   padding-right: 70px;
+  margin-left: 100px;
 }
 
 .bottom-figure {
