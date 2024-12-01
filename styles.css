@@ -198,6 +198,12 @@ hr.rounded {
   /* width: 100%; */
 }
 
+.kdas-control-figure {
+  margin-right: 50px;
+  float: right;
+  width: 60%;
+}
+
 .figcaption {
   text-align: center;
   width: 100%
