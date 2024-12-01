@@ -138,6 +138,13 @@ hr.rounded {
   margin-right: 250px;
 }
 
+.certifications-image-container {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+
 .me-shuttle-img {
   width: 100%;
   /* width: 35%;
