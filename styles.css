@@ -55,7 +55,10 @@ hr.menu-rounded {
 
 #profile-image {
   border-radius: 30px;
-  width: 450px;
+  /* width: 450px; */
+  /* height: 310px; */
+  width: 100%;
+  max-width: 450px;
 }
 
 .bio-text {
@@ -105,7 +108,9 @@ hr.rounded {
 }
 
 .case-studies-image {
-  width: 200px;
+  /* width: 200px; */
+  width: 100%;
+  max-width: 200px;
 }
 
 .case-study-item {
@@ -140,8 +145,21 @@ hr.rounded {
 
 .certifications-image-container {
   margin-top: 100px;
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* display: grid; */
+  /* grid-template-columns: auto auto auto; */
+}
+
+.certifications-image-container > div {
+  text-align: center;
+  /* width: 400px;
+  height: 400px; */
+}
+
+.cert-img {
+  width: 350px;
 }
 
 
@@ -214,4 +232,8 @@ hr.rounded {
 .figcaption {
   text-align: center;
   width: 100%
+}
+
+.about-text {
+  padding-right: 100px;
 }
