@@ -1,55 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>David Barrineau</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <!-- This section could use an HTML template but need a local web server for it.-->
-    <h1 id="name" class="center-text">David Barrineau</h1>
-    <h4 id="title" class="center-text">Senior Solutions Architect</h4>
-    <div class="menu">
-      <div class="menu-item">
-        <a href="index.html">Home</a>
-      </div>
-      <div class="menu-item">
-        <a href="certifications.html">Certifications</a>
-      </div>
-      <div class="menu-item">
-        <a href="skills.html">Skills</a>
-      </div>
-      <div class="menu-item">
-        <a href="about.html">About</a>
-      </div>
-    </div>
-    <hr class="menu-rounded">
-    <div class="social-icons">
-      <a class="social-icon" href="https://www.linkedin.com/in/david-barrineau/" target="_blank">
-        <img class="linkedin-icon" src="images/LI-In-Bug.png">
-      </a>
-      <a class="social-icon" href="https://medium.com/@david.barrineau_14226" target="_blank">
-        <img class="medium-icon" src="images/Medium-Icon-Black.png">
-      </a>
-      <a class="social-icon" href="https://github.com/cdbarrineau" target="_blank">
-        <img class="git-hub-icon" src="images/github-mark.png">
-      </a>
-    </div>
-    <!-- END common section. -->
-
-    <div class="case-studies-content">
-      <!-- <div> -->
-        <figure class="coyote-figure">
-          <!-- <img class="selfy-img" src="images/selfy.png"> -->
-          <img id="profile-image" src="images/ProfilePic.jpeg">
-        </figure>
-        <!-- <img id="profile-image" src="images/ProfilePic.jpeg"> -->
-      <!-- </div> -->
-      <div class="ksc-text">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>David Barrineau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>David Barrineau</h1>
+            <p>Solutions Architect | Problem Solver | Innovator</p>
+        </div>
+    </header>
+    <section id="about" class="section">
+        <h2>About Me</h2>
         <p>
-          As a passionate Software Architect with over 20 years of experience in designing and building scalable, high-performance
+          As a passionate Solutions Architect with over 20 years of experience in designing and building scalable, high-performance
           software systems, I thrive on solving complex problems and turning innovative ideas into reality. My expertise spans
           across system architecture, cloud-native technologies, microservices, and ensuring robust, maintainable codebases that
           align with both business goals and user needs.  Throughout my career, I've had the privilege of leading cross-functional teams,
@@ -65,125 +42,104 @@
           Whether I'm optimizing an existing system or designing from scratch, I am always focused on delivering value and ensuring
           long-term scalability and maintainability.
         </p>
+    </section>
 
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul>
+          <li>
+            System & Solutions Architecture
+          </li>
+          <li>
+            Microservices, Cloud, and Distributed Systems
+          </li>
+          <li>
+            Solution Design & Integration
+          </li>
+          <li>
+            Agile Methodologies & DevOps Practices
+          </li>
+          <li>
+            Code Quality & Best Practices
+          </li>
+          <li>
+            Mentorship & Team Leadership
+          </li>
+          <li>
+            Business-Driven Development
+          </li>
+        </ul>
+    </section>
 
+    <section id="projects" class="section">
+        <h2>Case Studies</h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>National Training Center</h3>
+                <img class="project-img" src="images/ntc.png" alt="Me at NTC">
+                <p>
+                  The National Training Center (NTC) is located at Ft. Irwin in California.  NTC is the be-all and end-all for training.
+                  <a href="ntc.html">Here we take a look at how the Force-on-Target training software was developed and how it is used
+                    for Battalion-level training.</a>
+                </p>
+            </div>
+            <div class="project">
+                <h3>KDAS</h3>
+                <img class="project-img" src="images/machine-gun.png" alt="Machine Gun">
+                <p>
+                  The Known Distance Automated Scoring (KDAS) solution is a custom built scoring system used by the Marines to qualify
+                  with their rifles and machine guns.  This training is essential for Marines to see how well they shoot
+                  so that they can use their weapons in battle.
+                  <a href="kdas.html">Here we take a look at how the KDAS training software was developed and how it is used
+                    for qualification training.</a>
+                </p>
+            </div>
+            <div class="project">
+              <h3>TRACR</h3>
+              <img class="project-img" src="images/tank-firing.png" alt="Machine Gun">
+              <p>
+                One of the products that is widely used for training in called Targetry Range Automated Control and Recording (TRACR).  This
+                product is deployed to hundreds of live-fire ranges throughout the world.
+                <a href="tracr.html">Here we take a look at the TRACR product and
+                  the side-projects developed for both Army and Marines training.</a>
+              </p>
+            </div>
+            <div class="project">
+              <h3>Kennedy Space Center</h3>
+              <img class="project-img" src="images/shuttle-fly-by.png" alt="Machine Gun">
+              <p>
+                The Kennedy Space Center (KSC) is famous for the launching of manned rockets since the Mercury program in the 1961
+                when Alan Sheparrd was the first American in space.  Perhaps, other than the rocket that put a man on the moon, it 
+                is most famous for the Space Shuttle.
+                 <a href="ksc.html">Here we take a look at the software involved with replacing the existing system.</a>
+             </p>
+            </div>
+            <!-- <div class="project">
+              <h3>Project Two</h3>
+              <p>Built a scalable microservices architecture for a large e-commerce platform.</p>
+            </div> -->
+        </div>
+    </section>
 
-
-        <!-- <p>
-          I'm a Senior Architect working for a firm out of Orlando Florida.  I've worked
-          for this company for over 20 years on mainly US DoD contracts that help train the military
-          for battle by qualifying Marines and Soldiers in everything from Small Arms to tanks to
-          aviation.  Before that I worked for the Kennedy Space Center in Florida on software to
-          replace the existing system to launch the Space Shuttle.
-        </p>
-        <p>
-          I have held multiple roles during the past 25 years for software engineering, from junior
-          through senior roles and currently an architect. 
-        </p>
-          I hold multiple certifications ranging from Soft Skills to Agile to AWS Solutions Architect - Professional.
-         -->
-      </div>
-    </div>
-
-    <hr class="rounded">
-
-    <div id="case-studies">
-      <h2>Case Studies</h2>
-
-      <!-- <div class="case-study-item">
-        <div>
-          <h4>
-            <a href="coord-grabber.html">Coord Grabber</a>
-          </h4>
-          <a href="coord-grabber.html">
-            <img class="case-studies-image" src="images/coord-grabber.png">
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, please reach out via email:</p>
+        <a href="mailto:cdbarrineau@icloud.com">cdbarrineau@icloud.com</a>
+        <p class="find-me-text">Or find me on the web at:</p>
+        <div class="social-icons">
+          <a class="social-icon" href="https://www.linkedin.com/in/david-barrineau/" target="_blank">
+            <img class="linkedin-icon" src="images/LI-In-Bug.png">
+          </a>
+          <a class="social-icon" href="https://medium.com/@david.barrineau_14226" target="_blank">
+            <img class="medium-icon" src="images/Medium-Icon-Black.png">
+          </a>
+          <a class="social-icon" href="https://github.com/cdbarrineau" target="_blank">
+            <img class="git-hub-icon" src="images/github-mark.png">
           </a>
         </div>
-        <div class="case-study-item-text">
-          <p>
-            Coord Grabber is an application that allows the user to click on a spot of the earth and get the UTM coordinates for the
-            clicked spot.  This is used for placement of assets such as targetry devices.
-            <a href="coord-grabber.html">Here we take a look at the architecture and deployment behind the tool.</a>
-          </p>
-        </div>
-      </div> -->
-
-      <!-- <div class="case-study-item">
-        cTRACR
-      </div> -->
-
-      <div class="case-study-item">
-        <div>
-          <h4>
-            <a href="ntc.html">National Training Center</a>
-          </h4>
-          <a href="ntc.html">
-            <img class="case-studies-image" src="images/ntc.png">
-          </a>
-        </div>
-        <div class="case-study-item-text">
-          <p>
-            The National Training Center (NTC) is located at Ft. Irwin in California.  NTC is the be-all and end-all for training.
-            <a href="ntc.html">Here we take a look at how the Force-on-Target training software was developed and how it is used
-              for Battalion-level training.</a>
-          </p>
-        </div>
-      </div>
-      <div class="case-study-item">
-        <div>
-          <h4>
-            <a href="kdas.html">KDAS</a>
-          </h4>
-          <a href="kdas.html">
-            <img class="case-studies-image" src="images/machine-gun.png">
-          </a>
-        </div>
-        <div class="case-study-item-text">
-          <p>
-            The Known Distance Automated Scoring (KDAS) solution is a custom built scoring system used by the Marines to qualify
-            with their rifles and machine guns.  This training is essential for Marines to see how well they shoot
-            so that they can use their weapons in battle.
-            <a href="kdas.html">Here we take a look at how the KDAS training software was developed and how it is used
-              for qualification training.</a>
-          </p>
-        </div>
-      </div>
-      <div class="case-study-item">
-        <div>
-          <h4>
-            <a href="tracr.html">TRACR</a>
-          </h4>
-          <a href="tracr.html">
-            <img class="case-studies-image" src="images/tank-firing.png">
-          </a>
-        </div>
-        <div class="case-study-item-text">
-          <p>
-            One of the products that is widely used for training in called Targetry Range Automated Control and Recording (TRACR).  This
-            product is deployed to hundreds of live-fire ranges throughout the world.
-            <a href="tracr.html">Here we take a look at the TRACR product and
-              the side-projects developed for both Army and Marines training.</a>
-          </p>
-        </div>
-      </div>
-      <div class="case-study-item">
-        <div>
-          <h4>
-            <a href="ksc.html">Kennedy Space Center</a>
-          </h4>
-          <a href="ksc.html">
-            <img class="case-studies-image" src="images/shuttle-fly-by.png">
-          </a>
-        </div>
-        <div class="case-study-item-text">
-          <p>
-             The Kennedy Space Center (KSC) is famous for the launching of manned rockets since the Mercury program in the 1961
-             when Alan Sheparrd was the first American in space.  Perhaps, other than the rocket that put a man on the moon, it 
-             is most famous for the Space Shuttle.
-              <a href="ksc.html">Here we take a look at the software involved with replacing the existing system.</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </body>
+    </section>
+    <footer>
+        <p>&copy; 2024 David Barrineau | Solutions Architect</p>
+    </footer>
+</body>
 </html>

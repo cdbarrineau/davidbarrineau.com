@@ -1,70 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>David Barrineau</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <!-- This section could use an HTML template but need a local web server for it.-->
-    <h1 id="name" class="center-text">David Barrineau</h1>
-    <h4 id="title" class="center-text">Senior Solutions Architect</h4>
-    <div class="menu">
-      <div class="menu-item">
-        <a href="index.html">Home</a>
-     </div>
-      <div class="menu-item">
-        <a href="certifications.html">Certifications</a>
-      </div>
-      <div class="menu-item">
-        <a href="skills.html">Skills</a>
-      </div>
-      <div class="menu-item">
-        <a href="about.html">About</a>
-      </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>David Barrineau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-content">
+        <h1>David Barrineau</h1>
+        <p>Solutions Architect | Problem Solver | Innovator</p>
     </div>
-    <hr class="menu-rounded">
-    <div class="social-icons">
-      <a class="social-icon" href="https://www.linkedin.com/in/david-barrineau/" target="_blank">
-        <img class="linkedin-icon" src="images/LI-In-Bug.png">
-      </a>
-      <a class="social-icon" href="https://medium.com/@david.barrineau_14226" target="_blank">
-        <img class="medium-icon" src="images/Medium-Icon-Black.png">
-      </a>
-      <a class="social-icon" href="https://github.com/cdbarrineau" target="_blank">
-        <img class="git-hub-icon" src="images/github-mark.png">
-      </a>
-    </div>
-    <!-- END common section. -->
-    <div>
-      <div class="case-studies-content">
-
-        <figure class="ft-riley-figure">
-          <img class="ft-riley-img" src="images/KDAS-Student.png">
-          <figcaption class="figcaption">KDAS Shooter (Student) View</figcaption>
-        </figure>
-        
-        <div class="ksc-text">
-          <p>
-            Marines are famous for their use of rifles and their marksmanship.  They must qualify to use their weapons annually in
-            order to be able to use their weapons.  KDAS is comprised of a fixed set of targets on different lanes with one shooter
-            per lane.  If there are 40 lanes, they can qualify 40 Marines at a time.  Each training exercise is comprised of a set
-            of timed intervals they have to complete some number of shots.  At the end of the training exercise, they must hit the
-            target a fixed amount of times in order to qualify.  When a Marine is done with their exercise, they are given a PDF
-            printout of their results a.k.a "scorecard".  If a Marine does not meet the standard, they must try again until they
-            qualify.
-          </p>
-          <p>
-            In order to receive where the shots were fired on a silhouette, I worked with a hardware vendor that developed sensors 
+  </header>
+  <section id="projects" class="section">
+    <div class="case-study-container">
+      <div class="image-wrap">
+          <img src="images/KDAS-Student.png" alt="KDAS Student">
+      </div>
+      <p class="case-study-p">
+        Marines are famous for their use of rifles and their marksmanship.  They must qualify to use their weapons annually in
+        order to be able to use their weapons.  KDAS is comprised of a fixed set of targets on different lanes with one shooter
+        per lane.  If there are 40 lanes, they can qualify 40 Marines at a time.  Each training exercise is comprised of a set
+        of timed intervals they have to complete some number of shots.  At the end of the training exercise, they must hit the
+        target a fixed amount of times in order to qualify.  When a Marine is done with their exercise, they are given a PDF
+        printout of their results a.k.a "scorecard".  If a Marine does not meet the standard, they must try again until they
+        qualify.
+      </p>
+      <p class="case-study-p">
+        In order to receive where the shots were fired on a silhouette, I worked with a hardware vendor that developed sensors 
             to create an Interface Control Document (ICD) that allowed the firmware of the sensor to communicate to the software
             system that consumed the shot data, displayed the shots, and scored a shooter.  The computers onboard the hardware were
             able to handle more processing power than traditional targety devices so we used RabbitMQ with MQTT protocol for data
             inbound and outbound to and from the devices from the control software system.
-          </p>
-          <p>
-            I was tasked with developing a training software system for automated scoring for their training by myself.  I worked closely
+      </p>
+      <p class="case-study-p">
+        I was tasked with developing a training software system for automated scoring for their training by myself.  I worked closely
             with a Subject Matter Expert (SME) and a Master Gunner to develop the requirements for the software system.  Having
             a good set of requirements, I was able to develop the training software from the ground up from the ICD to the printed
             scorecards.  We wanted the ability to run the software on a small device so the software architecture is a Modulith
@@ -77,21 +58,38 @@
             RabbitMQ with the MQTT protocol.  The use of MQTT was two-fold.  First, wifi signal strength is sometimes spotty at best.
             MQTT was developed for IoT devices so this was the best solution over things like straight WebSocket implementations.  Secondly,
             MQTT has a very small data packet size as compared to other protocols like AMQP.
-          </p>
-          <p>
-            The view to the left is what a shooter (a.k.a Student) sees on a tablet at the firing line.  The view shows the lane
+      </p>
+      <p class="case-study-p">
+        The view to the left is what a shooter (a.k.a Student) sees on a tablet at the firing line.  The view shows the lane
             they are on, at what distance they are firing at and how many rounds they have shot.  The center shows a graphical view
             of the physical target's silhouette along with where their shots on the silhouette are (the numbered circles).  Depending
             on where they place the shots on the silhouette, the shooter is graded on where the shot placements are.  In this picture,
             the shooter has placed shots in the "Destroy" zone indicated by the lower-right orange "D". 
-          </p>
-        </div>
-
-        <figure class="kdas-control-figure">
-          <img class="machine-gun-img" src="images/KDAS-Scenario.png">
-          <figcaption class="figcaption">KDAS Main Control of Exercise Execution</figcaption>
-        </figure>
-      </div>
+      </p>
     </div>
-  </body>
+  </section>
+  
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, please reach out via email:</p>
+      <a href="mailto:cdbarrineau@icloud.com">cdbarrineau@icloud.com</a>
+      <p class="find-me-text">Or find me on the web at:</p>
+      <div class="social-icons">
+        <a class="social-icon" href="https://www.linkedin.com/in/david-barrineau/" target="_blank">
+          <img class="linkedin-icon" src="images/LI-In-Bug.png">
+        </a>
+        <a class="social-icon" href="https://medium.com/@david.barrineau_14226" target="_blank">
+          <img class="medium-icon" src="images/Medium-Icon-Black.png">
+        </a>
+        <a class="social-icon" href="https://github.com/cdbarrineau" target="_blank">
+          <img class="git-hub-icon" src="images/github-mark.png">
+        </a>
+      </div>
+  </section>
+  <footer>
+      <p>&copy; 2024 David Barrineau | Solutions Architect</p>
+  </footer>
+  </div>
+</body>
 </html>

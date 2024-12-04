@@ -1,80 +1,156 @@
 @import url('fonts/satoshi/css/satoshi.css');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  /* font-family: 'Inter', sans-serif; */
   font-family: Satoshi-Regular;
-  margin-left: 100px;
-  margin-right: 100px;
-  background-color: #a99e7c1a;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-a:link, a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-#name {
-  font-size: 40px;
-}
-
-#title {
-  font-size: 25px;
-  margin-bottom: 40px;
-}
-
-.menu {
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
-  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
   display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
   justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
 }
 
-.menu-item {
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.header-content h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.header-content p {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+section {
+  padding: 60px 20px;
   text-align: center;
-  line-height: 75px;
-  margin: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-hr.menu-rounded {
-  border-top: 2px solid #bbb;
-  border-radius: 5px;
-  width: 70%;
-  margin-bottom: 50px;
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.center-text {
-  text-align: center; 
+ul {
+  list-style: none;
+  margin: 20px 0;
 }
 
-.top-content {
-  display: flex;
+ul li {
+  font-size: 1.1em;
+  margin: 5px 0;
 }
 
-#profile-image {
-  border-radius: 30px;
-  /* width: 450px; */
-  /* height: 310px; */
-  width: 100%;
-  max-width: 450px;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.bio-text {
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 250px;
+.project {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1.1em;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .header-content h1 {
+      font-size: 2.5em;
+  }
+
+  .header-content p {
+      font-size: 1em;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .image-wrap {
+    float: none; /* Image will no longer float */
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .image-wrap img {
+      width: 100%;
+      max-width: none; /* Let the image take full width on small screens */
+  }
+}
+
+.find-me-text {
+  margin-top: 20px;
 }
 
 .social-icons {
-  float: right;
-  display: grid;
-  grid: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .social-icon {
-  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .linkedin-icon {
@@ -89,151 +165,39 @@ hr.menu-rounded {
   width: 42px;
 }
 
-hr.rounded {
-  border-top: 2px solid #bbb;
-  border-radius: 5px;
-  width: 70%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+.case-study-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+            padding: 20px;
 }
 
-
-
-
-
-#case-studies {
-  margin-top: 20px;
-  /* display: grid; */
-  /* grid-template-columns: auto auto; */
+/* Image with text wrapping */
+.image-wrap {
+  float: left; /* Makes the text wrap around the image */
+  margin-right: 20px; /* Spacing between image and text */
+  margin-bottom: 20px; /* Bottom space */
 }
 
-.case-studies-image {
-  /* width: 200px; */
-  width: 100%;
-  max-width: 200px;
+.image-wrap img {
+  width: 100%; /* Ensures the image is responsive */
+  max-width: 300px; /* Max width to avoid too large images */
+  height: auto;
 }
 
-.case-study-item {
-  display: grid;
-  grid-template-columns: 15% 40%;
-}
-
-.case-study-item-text {
-  margin-top: 50px;
-  margin-left: 50px;
-}
-
-.case-studies-content {
-  margin-right: 100px;
-}
-
-
-
-
-
-
-
-.skills-text {
-  margin-left: 50px;
-  margin-right: 250px;
-}
-
-.certifications-text {
-  margin-left: 50px;
-  margin-right: 250px;
-}
-
-.certifications-image-container {
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  /* display: grid; */
-  /* grid-template-columns: auto auto auto; */
-}
-
-.certifications-image-container > div {
-  text-align: center;
-  /* width: 400px;
-  height: 400px; */
-}
-
-.cert-img {
-  width: 350px;
-}
-
-
-.me-shuttle-img {
-  width: 100%;
-  /* width: 35%;
-  margin-right: 50px;
-  float: left; */
-}
-
-.shuttle-tank {
-  width: 100%;
-  /* margin-top: 50px;
-  width: 50%; */
-}
-
-.ksc-text {
-  margin-right: 50px;
-  padding-top: 40px;
-  padding-right: 70px;
-  margin-left: 100px;
+.case-study-p {
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .bottom-figure {
-  margin-right: 50px;
-  float: right;
-  width: 40%;
+  margin-top: 20px;
+  float: right !important;
 }
 
-.coyote-figure {
-  margin-right: 50px;
-  float: left;
-  width: 40%;
-}
-
-.coyote-img {
-  width: 100%;
-  /* width: 35%;
-  margin-right: 50px;
-  float: left; */
-}
-
-.selfy-img {
-  /* margin-top: 50px; */
-  width: 100%;
-}
-
-.ft-riley-img {
-  width: 100%;
-}
-
-.ft-riley-figure {
-  margin-right: 50px;
-  float: left;
-  width: 30%;
-}
-
-.machine-gun-img {
-  /* margin-top: 50px; */
-  width: 100%;
-  /* width: 100%; */
-}
-
-.kdas-control-figure {
-  margin-right: 50px;
-  float: right;
-  width: 60%;
-}
-
-.figcaption {
-  text-align: center;
-  width: 100%
-}
-
-.about-text {
-  padding-right: 100px;
+.project-img {
+  width: 200px;
 }

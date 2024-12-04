@@ -1,85 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>David Barrineau</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <!-- This section could use an HTML template but need a local web server for it.-->
-    <h1 id="name" class="center-text">David Barrineau</h1>
-    <h4 id="title" class="center-text">Senior Solutions Architect</h4>
-    <div class="menu">
-      <div class="menu-item">
-        <a href="index.html">Home</a>
-     </div>
-      <div class="menu-item">
-        <a href="certifications.html">Certifications</a>
-      </div>
-      <div class="menu-item">
-        <a href="skills.html">Skills</a>
-      </div>
-      <div class="menu-item">
-        <a href="about.html">About</a>
-      </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>David Barrineau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-content">
+        <h1>David Barrineau</h1>
+        <p>Solutions Architect | Problem Solver | Innovator</p>
     </div>
-    <hr class="menu-rounded">
-    <div class="social-icons">
-      <a class="social-icon" href="https://www.linkedin.com/in/david-barrineau/" target="_blank">
-        <img class="linkedin-icon" src="images/LI-In-Bug.png">
-      </a>
-      <a class="social-icon" href="https://medium.com/@david.barrineau_14226" target="_blank">
-        <img class="medium-icon" src="images/Medium-Icon-Black.png">
-      </a>
-      <a class="social-icon" href="https://github.com/cdbarrineau" target="_blank">
-        <img class="git-hub-icon" src="images/github-mark.png">
-      </a>
-    </div>
-    <!-- END common section. -->
-    <div class="case-studies-content">
-      <figure class="ft-riley-figure">
-        <img class="me-shuttle-img" src="images/me-shuttle.png">
-        <figcaption class="figcaption">Me in front of Launch Pad A, days prior to launch of the Space Shuttle</figcaption>
-      </figure>
-      <div class="ksc-text">
-        <p>
-          I received the honor of working at KSC on a Space Shuttle software project when it was still in operation.  The goal of the
+  </header>
+  <section id="projects" class="section">
+    <div class="case-study-container">
+      <div class="image-wrap">
+          <img src="images/me-shuttle.png" alt="KDAS Student">
+      </div>
+      <p class="case-study-p">
+        I received the honor of working at KSC on a Space Shuttle software project when it was still in operation.  The goal of the
           project was to replace the aging software and hardware that was being used to launch the Shuttle.  The existing system was
           all custom-built hardware and software--even the operating system called PC-GOAL was custom built.
-        </p>
-        <p>
-          In order to accomplish the task of replacing the hardware, the use of SUN Solaris servers and client machines was
+      </p>
+      <p class="case-study-p">
+        In order to accomplish the task of replacing the hardware, the use of SUN Solaris servers and client machines was
           utilized.  Software was written in C/C++ for all back-end processing of data coming from the Shuttle's sensors.  The
           user interface was written in Java Swing.  At that time, Swing was a new product, not even included in the code JDK.
-        </p>
-        <p>
-          My job was to make a layer that allowed the C/C++ code to communicate with the Java code.  In order to accomplish this,
+      </p>
+      <p class="case-study-p">
+        My job was to make a layer that allowed the C/C++ code to communicate with the Java code.  In order to accomplish this,
           we used the Java Native Interface (JNI) API.  At that time, CORBA was very popular.  Therefore, used CORBA for client-server
           communication between hosts.
-        </p>
-        <p>
-          We worked closely with employees from SUN Microsystems since we were both using their hardware and Java was written 
-          by James Gosling, a SUN employee.  I was a junior software engineer at the time so I did not have a lot of exposure to
-          the architecture creation.  However, I was in charge of documenting the JNI layer, which was very large.  I used UML
-          for class diagrams and sequence diagrams.  One of the proudest moments I had was two-fold.  Unknowing to one of the SUN
-          architects and and I, we both were working on a design for the JNI layer to relay sensor events from the Shuttle to the
-          Java UI.  After the fact, our architecture was almost identical!  Additionally, one of the requirements was for a certain
-          piece of information to be sent from a sensor to the UI twice a second.  The SUN architect and I were talking and he was
-          very surprised that the code I had written was able to handle this rate of data over a sustained amount of time, usually
-          for hours to days at a time.
-        </p>
-        <p>
-          Unfortunately, as we all know, the Shuttle was retired and therefore the project was canceled.  This role did provide
-          me a wealth of knowledge for creating software systems and gave me a spring-board for my next role with Riptide Software
-          (now Phoenix Defense) which is where I'm still at today.
-        </p>
+      </p>
+      <p class="case-study-p">
+        We worked closely with employees from SUN Microsystems since we were both using their hardware and Java was written 
+        by James Gosling, a SUN employee.  I was a junior software engineer at the time so I did not have a lot of exposure to
+        the architecture creation.  However, I was in charge of documenting the JNI layer, which was very large.  I used UML
+        for class diagrams and sequence diagrams.  One of the proudest moments I had was two-fold.  Unknowing to one of the SUN
+        architects and and I, we both were working on a design for the JNI layer to relay sensor events from the Shuttle to the
+        Java UI.  After the fact, our architecture was almost identical!  Additionally, one of the requirements was for a certain
+        piece of information to be sent from a sensor to the UI twice a second.  The SUN architect and I were talking and he was
+        very surprised that the code I had written was able to handle this rate of data over a sustained amount of time, usually
+        for hours to days at a time.
+      </p>
+  </section>
+  
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, please reach out via email:</p>
+      <a href="mailto:cdbarrineau@icloud.com">cdbarrineau@icloud.com</a>
+      <p class="find-me-text">Or find me on the web at:</p>
+      <div class="social-icons">
+        <a class="social-icon" href="https://www.linkedin.com/in/david-barrineau/" target="_blank">
+          <img class="linkedin-icon" src="images/LI-In-Bug.png">
+        </a>
+        <a class="social-icon" href="https://medium.com/@david.barrineau_14226" target="_blank">
+          <img class="medium-icon" src="images/Medium-Icon-Black.png">
+        </a>
+        <a class="social-icon" href="https://github.com/cdbarrineau" target="_blank">
+          <img class="git-hub-icon" src="images/github-mark.png">
+        </a>
       </div>
-      <figure class="bottom-figure">
-        <img class="shuttle-tank" src="images/shuttle-tank.jpg">
-        <figcaption class="figcaption">Side-view of the external booster on the launch pad</figcaption>
-      </figure>
-    </div>
-  </body>
+  </section>
+  <footer>
+      <p>&copy; 2024 David Barrineau | Solutions Architect</p>
+  </footer>
+  </div>
+</body>
 </html>
