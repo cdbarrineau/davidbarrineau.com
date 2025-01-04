@@ -205,3 +205,15 @@ footer {
 .project-img {
   width: 200px;
 }
+
+.aws-link {
+  display: block;
+  width: 100px;
+  position: absolute;
+  margin-top: 40px;
+}
+
+.aws-details-link {
+  display: block;
+  margin-bottom: 20px;
+}
