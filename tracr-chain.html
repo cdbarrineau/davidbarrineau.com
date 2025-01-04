@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>David Barrineau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="david-barrineau-resume.pdf" target="_blank">Resumé</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-content">
+        <h1>David Barrineau</h1>
+        <p>Solutions Architect | Problem Solver | Innovator</p>
+    </div>
+  </header>
+  <section id="projects" class="section">
+    <div class="case-study-container">
+      <div class="image-wrap">
+          <img src="images/tank-firing.png" alt="Tank Firing">
+      </div>
+      <p class="case-study-p">
+        TRACR Chain is an emerging AWS application that is used by the military to view and colocate information about how soldiers, crews, and units
+        train.  Its input is the data obtained by onsite applications that have no internet connectivity.  The data is exported by a custom application
+        to a soldier's phone then uploaded to the TRACR Chain AWS application.  Users of TRACR Chain can then "slice and dice" the data from multiple
+        units to view how their training ranks among other soldiers, crews, and units.
+      </p>
+      <p class="case-study-p">
+        The AWS technically used in TRACR Chain includes various aspects of AWS.  In order to log into the application, AWS Amplify provides access to
+        an AWS Cognito where users are managed to authorize and authenticate that a user is allowed access to TRACR Chain.
+      </p>
+      <p class="case-study-p">
+        The TRACR Chain application itself is composed of four microservices: Soldier, Crew, Unit, and the UI.  Each of these microservices is a Docker
+        container whose images are stored on the AWS Elastic Container Registry.  When a software update is made, it is pushed to GitHub and there is a 
+        GitHub Webhook that kicks off an AWS Code Pipeline build and deployment.  The containers are then pushed to AWS's Elastic Container Service (ECS)
+        on a Fargate deployment.  Since there are multiple containers, the use of a Docker network is utilized since the containers must communicate with
+        each other.  Additionally, CloudFront as the CDN is utilized to enable faster access to the application based on geographic location.  TRACR Chain
+        uses Route 53 with a custom domain to access the application.  SSL/TLS certificates, issued by AWS Certificate Manager, are used to provide security
+        to the application.  In order to store data, the use of AWS RDS (Postgres) is used.  Realtime events are needed for the application.  Therefore, the
+        application uses AWS's Amazon MQ with ApacheMQ.  This provides asynchronous updates from the back-end to the front-end.  In order for services to
+        access resources like databases, ApacheMQ, etc.  connection strings and passwords are stored in AWS's Parameter Store as Secret Strings.  While the
+        use of Secrets Manager could be used, the decision was made to use the Parameter Store because of a lower cost.  Finally, all resources are defined
+        by CloudFormation templates.  This allows for repeatable deployments and adheres to the IaC principle.
+      </p>
+      <p class="case-study-p">
+        All containers expect for the UI are Java-based applications using Spring Boot.  The UI is an Angular application that uses Apache to serve the application.
+      </p>
+  </section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, please reach out via email:</p>
+      <a href="mailto:cdbarrineau@icloud.com">cdbarrineau@icloud.com</a>
+      <p class="find-me-text">Or find me on the web at:</p>
+      <div class="social-icons">
+        <a class="social-icon" href="https://www.linkedin.com/in/david-barrineau/" target="_blank">
+          <img class="linkedin-icon" src="images/LI-In-Bug.png">
+        </a>
+        <a class="social-icon" href="https://medium.com/@david.barrineau_14226" target="_blank">
+          <img class="medium-icon" src="images/Medium-Icon-Black.png">
+        </a>
+        <a class="social-icon" href="https://github.com/cdbarrineau" target="_blank">
+          <img class="git-hub-icon" src="images/github-mark.png">
+        </a>
+      </div>
+  </section>
+  <footer>
+      <p>&copy; 2024 David Barrineau | Solutions Architect</p>
+  </footer>
+  </div>
+</body>
+</html>

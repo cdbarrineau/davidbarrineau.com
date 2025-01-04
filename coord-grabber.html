@@ -47,12 +47,12 @@
       </p>
       <p class="case-study-p">
         The application is hosted on an AWS deployment using the Elastic Container Service (ECS) utilizing Docker
-        containers with Fargate.  There is a CI/CD Pipeline setup with GitHub Hooks that allow for continual integration
+        containers with Fargate.  There is a CI/CD Pipeline setup with a GitHub Webhook that allows for continual integration
         and deployment when the application changes.  Additionally, the docker images are stored on AWS's Container Registry.
       </p>
       <p class="case-study-p">
         This deployment is setup to scale horizontally out when there are lots of requests then scale back in when the requests have backed
-        off. CoordGrabber uses CloudFront to host its deployment on the CDN for faster access.  Additionally, it uses Route53 with a custom
+        off. CoordGrabber uses CloudFront to host its deployment on the CDN for faster access.  Additionally, it uses Route 53 with a custom
         domain secured by SSL/TLS certificates obtained by the Certificate Manager of AWS.
       </p>
     </div>
