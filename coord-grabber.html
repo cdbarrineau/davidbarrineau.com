@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>David Barrineau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="david-barrineau-resume.pdf" target="_blank">Resumé</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-content">
+        <h1>David Barrineau</h1>
+        <p>Solutions Architect | Problem Solver | Innovator</p>
+    </div>
+  </header>
+
+  <!-- Modal (overlay) that will display the larger image -->
+  <div id="imageModal" class="modal">
+    <span id="closeBtn" class="close-btn">&times;</span>
+    <img id="modalImage" class="modal-content" src="" alt="Full Image">
+  </div>
+
+  <section id="projects" class="section">
+    <div class="case-study-container">
+      <div class="image-wrap">
+        <img id="thumbnail" class="thumbnail" src="images/coord-grabber-2.png" alt="Coord Grabber UI Closeup">
+      </div>
+      <p class="case-study-p">
+        The Coord Grabber SaaS application is used to quickly identify the physical location in Military Grid Reference System (MGRS)
+        of a point on the earth.  This allows personnel that install hardware devices such as target, battlefield effects, wireless
+        mesh devices, etc. on military training ranges to pinpoint the exact location of where to place hardware devices.  The technology
+        behind this application is an Angular application that integrates
+        <a class="normal-font-link" href="https://worldwind.arc.nasa.gov/web/" target="_blank">NASA's Web World Wind</a>
+        that allows the display of the earth and picking locations on the earth.
+      </p>
+      <p class="case-study-p">
+        The application is hosted on an AWS deployment using the Elastic Container Service (ECS) utilizing Docker
+        containers with Fargate.  There is a CI/CD Pipeline setup with GitHub Hooks that allow for continual integration
+        and deployment when the application changes.  Additionally, the docker images are stored on AWS's Container Registry.
+      </p>
+      <p class="case-study-p">
+        This deployment is setup to scale horizontally out when there are lots of requests then scale back in when the requests have backed
+        off. CoordGrabber uses CloudFront to host its deployment on the CDN for faster access.  Additionally, it uses Route53 with a custom
+        domain secured by SSL/TLS certificates obtained by the Certificate Manager of AWS.
+      </p>
+    </div>
+  </section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, please reach out via email:</p>
+      <a href="mailto:cdbarrineau@icloud.com">cdbarrineau@icloud.com</a>
+      <p class="find-me-text">Or find me on the web at:</p>
+      <div class="social-icons">
+        <a class="social-icon" href="https://www.linkedin.com/in/david-barrineau/" target="_blank">
+          <img class="linkedin-icon" src="images/LI-In-Bug.png">
+        </a>
+        <a class="social-icon" href="https://medium.com/@david.barrineau_14226" target="_blank">
+          <img class="medium-icon" src="images/Medium-Icon-Black.png">
+        </a>
+        <a class="social-icon" href="https://github.com/cdbarrineau" target="_blank">
+          <img class="git-hub-icon" src="images/github-mark.png">
+        </a>
+      </div>
+  </section>
+  <footer>
+      <p>&copy; 2024 David Barrineau | Solutions Architect</p>
+  </footer>
+  </div>
+</body>
+<script src="modal.js"></script>
+</html>

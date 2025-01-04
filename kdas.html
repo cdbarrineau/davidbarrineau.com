@@ -7,6 +7,7 @@
     <title>David Barrineau</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 <body>
   <header>
@@ -24,10 +25,17 @@
         <p>Solutions Architect | Problem Solver | Innovator</p>
     </div>
   </header>
+
+  <!-- Modal (overlay) that will display the larger image -->
+  <div id="imageModal" class="modal">
+    <span id="closeBtn" class="close-btn">&times;</span>
+    <img id="modalImage" class="modal-content" src="" alt="Full Image">
+  </div>
+
   <section id="projects" class="section">
     <div class="case-study-container">
       <div class="image-wrap">
-          <img src="images/KDAS-Student.png" alt="KDAS Student">
+        <img id="thumbnail" class="thumbnail" src="images/KDAS-Student.png" alt="KDAS Student">
       </div>
       <p class="case-study-p">
         Marines are famous for their use of rifles and their marksmanship.  They must qualify to use their weapons annually in
@@ -93,4 +101,5 @@
   </footer>
   </div>
 </body>
+<script src="modal.js"></script>
 </html>
