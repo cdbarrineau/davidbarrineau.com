@@ -43,37 +43,55 @@
         per lane.  If there are 40 lanes, they can qualify 40 Marines at a time.  Each training exercise is comprised of a set
         of timed intervals they have to complete some number of shots.  At the end of the training exercise, they must hit the
         target a fixed amount of times in order to qualify.  When a Marine is done with their exercise, they are given a PDF
-        printout of their results a.k.a "scorecard".  If a Marine does not meet the standard, they must try again until they
+        printout of their results a.k.a a "scorecard".  If a Marine does not meet the standard, they must try again until they
         qualify.
       </p>
       <p class="case-study-p">
+        Prior to the KDAS solution, Marines would manually keep track of where shots landed on a silhouette.  This involved a
+        "spotter" that sat beside a shooter looking through a magnifying glass at where a shot landed on a silhouette then
+        attempting to mark on a piece of paper where the shot landed.  This obviously has severe limitations.  First, the
+        spotter could be off on the placement of the shot.  Even as much as a millimeter on one shot can be the difference between a
+        Marine qualifying or not.  Second, there is the possibility that the spotter was generous with a shot's placement.  For
+        instance, the shot could have landed just outside of a Destroy zone but the spotter marked the shot as in the zone.  Additionally,
+        if a shot was way outside of a silhouette, the spotter would have no idea if the shot was high, low, too much left or right.
+        Finally, the amount of time involved in this training process limited the number of Marines that could train during a given
+        time, for KDAS usually two days.
+      </p>
+      <p class="case-study-p">
+        In order to take the human out of the equation, the KDAS solution was developed to rely on the hardware to detect the shots,
+        relay that information to the control software which would allow the shooter to dynamically see where the shot landed.  This
+        not only helps for accurate scoring and placement of the shots on a user's view of the silhouette but it also accurately
+        scores a shooter.  Additionally, the KDAS system allows for a higher throughput of shooters by automating the scoring.  One
+        Master Gunner estimated that the time for a training event was cut down by roughly 60%.
+      </p>
+      <p class="case-study-p">
         In order to receive where the shots were fired on a silhouette, I worked with a hardware vendor that developed sensors 
-            to create an Interface Control Document (ICD) that allowed the firmware of the sensor to communicate to the software
-            system that consumed the shot data, displayed the shots, and scored a shooter.  The computers onboard the hardware were
-            able to handle more processing power than traditional targety devices so we used RabbitMQ with MQTT protocol for data
-            inbound and outbound to and from the devices from the control software system.
+        to create an Interface Control Document (ICD) that allowed the firmware of the sensor to communicate to the software
+        system that consumed the shot data, displayed the shots, and scored a shooter.  The computers onboard the hardware were
+        able to handle more processing power than traditional targety devices so we used RabbitMQ with MQTT protocol for data
+        inbound and outbound to and from the devices from the control software system.
       </p>
       <p class="case-study-p">
         I was tasked with developing a training software system for automated scoring for their training by myself.  I worked closely
-            with a Subject Matter Expert (SME) and a Master Gunner to develop the requirements for the software system.  Having
-            a good set of requirements, I was able to develop the training software from the ground up from the ICD to the printed
-            scorecards.  We wanted the ability to run the software on a small device so the software architecture is a Modulith
-            written in Java using Spring Boot.  We also used PostgreSQL for storing data and JPA for data access.  Being a Modulith,
-            special care was taken to ensure that each component in the application could be extensible.  For this, I used the SOLID
-            principle with Domain Driven Design.  The main control software, Spring Boot application also had to communicate with
-            remote clients on tablets and other small devices.  In order to accomplish this, the clients were written in Angular
-            using HTML and CSS.  This way, there was no additional software to load on the clients--they just used the web browser.  The
-            communication from the client to the server was done via RESTful API calls.  Events from the server to the client also used
-            RabbitMQ with the MQTT protocol.  The use of MQTT was two-fold.  First, wifi signal strength is sometimes spotty at best.
-            MQTT was developed for IoT devices so this was the best solution over things like straight WebSocket implementations.  Secondly,
-            MQTT has a very small data packet size as compared to other protocols like AMQP.
+        with a Subject Matter Expert (SME) and a Master Gunner to develop the requirements for the software system.  Having
+        a good set of requirements, I was able to develop the training software from the ground up from the ICD to the printed
+        scorecards.  We wanted the ability to run the software on a small device so the software architecture is a Modulith
+        written in Java using Spring Boot.  We also used PostgreSQL for storing data and JPA for data access.  Being a Modulith,
+        special care was taken to ensure that each component in the application could be extensible.  For this, I used the SOLID
+        principle with Domain Driven Design.  The main control software, Spring Boot application also had to communicate with
+        remote clients on tablets and other small devices.  In order to accomplish this, the clients were written in Angular
+        using HTML and CSS.  This way, there was no additional software to load on the clients--they just used the web browser.  The
+        communication from the client to the server was done via RESTful API calls.  Events from the server to the client also used
+        RabbitMQ with the MQTT protocol.  The use of MQTT was two-fold.  First, wifi signal strength is sometimes spotty at best.
+        MQTT was developed for IoT devices so this was the best solution over things like straight WebSocket implementations.  Secondly,
+        MQTT has a very small data packet size as compared to other protocols like AMQP.
       </p>
       <p class="case-study-p">
         The view to the left is what a shooter (a.k.a Student) sees on a tablet at the firing line.  The view shows the lane
-            they are on, at what distance they are firing at and how many rounds they have shot.  The center shows a graphical view
-            of the physical target's silhouette along with where their shots on the silhouette are (the numbered circles).  Depending
-            on where they place the shots on the silhouette, the shooter is graded on where the shot placements are.  In this picture,
-            the shooter has placed shots in the "Destroy" zone indicated by the lower-right orange "D". 
+        they are on, at what distance they are firing at and how many rounds they have shot.  The center shows a graphical view
+        of the physical target's silhouette along with where their shots on the silhouette are (the numbered circles).  Depending
+        on where they place the shots on the silhouette, the shooter is graded on where the shot placements are.  In this picture,
+        the shooter has placed shots in the "Destroy" zone indicated by the lower-right orange "D". 
       </p>
     </div>
   </section>
@@ -97,7 +115,7 @@
       </div>
   </section>
   <footer>
-      <p>&copy; 2024 David Barrineau | Solutions Architect</p>
+      <p>&copy; 2025 David Barrineau | Solutions Architect</p>
   </footer>
   </div>
 </body>

@@ -41,17 +41,21 @@
         <img id="thumbnail" class="thumbnail" src="images/coord-grabber-2.png" alt="Coord Grabber UI Closeup">
       </div>
       <p class="case-study-p">
-        The Coord Grabber SaaS application is used to quickly identify the physical location in Military Grid Reference System (MGRS)
-        of a point on the earth.  This allows personnel that install hardware devices such as target, battlefield effects, wireless
-        mesh devices, etc. on military training ranges to pinpoint the exact location of where to place hardware devices.  The technology
-        behind this application is an Angular application that integrates
-        <a class="normal-font-link" href="https://worldwind.arc.nasa.gov/web/" target="_blank">NASA's Web World Wind</a>
-        that allows the display of the earth and picking locations on the earth.
+        The CoordGrabber SaaS application is used to quickly identify the physical location in Military Grid Reference System (MGRS)
+        of a point on the earth.  This allows personnel that install hardware devices such as targets, battlefield effects, wireless
+        mesh devices, etc. on military training ranges to pinpoint the exact location of where to place hardware devices.  Prior to
+        this tool, personnel that installed hardware devices on a training range had to use a combination of techniques to precisely
+        place these hardware devices on the ground.  This would lead to erroneous placement of devices and relaying the exact location
+        to the software system, which needs the precise location, was bound for errors.  This tool allows the placement of devices
+        with extreme precision which in turn allows for greater data accuracy.
       </p>
       <p class="case-study-p">
-        The application is hosted on an AWS deployment using the Elastic Container Service (ECS) utilizing Docker
-        containers with Fargate.  There is a CI/CD Pipeline setup with a GitHub Webhook that allows for continual integration
-        and deployment when the application changes.  Additionally, the docker images are stored on AWS's Container Registry.
+        The technology behind this application is an Angular application that integrates
+        <a class="normal-font-link" href="https://worldwind.arc.nasa.gov/web/" target="_blank">NASA's Web World Wind</a>
+        that allows the display of the earth and picking locations on the earth.  The application is hosted on an AWS deployment
+        using the Elastic Container Service (ECS) utilizing Docker containers with Fargate.  There is a CI/CD Pipeline setup
+        with a GitHub Webhook that allows for continual integration and deployment when the application changes.  Additionally,
+        the docker images are stored on AWS's Container Registry.
       </p>
       <p class="case-study-p">
         This deployment is setup to scale horizontally out when there are lots of requests then scale back in when the requests have backed
@@ -78,7 +82,7 @@
       </div>
   </section>
   <footer>
-      <p>&copy; 2024 David Barrineau | Solutions Architect</p>
+      <p>&copy; 2025 David Barrineau | Solutions Architect</p>
   </footer>
   </div>
 </body>
