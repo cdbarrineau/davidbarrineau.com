@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>David Barrineau</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="david-barrineau-resume.pdf" target="_blank">Resumé</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-content">
+        <h1>David Barrineau</h1>
+        <p>Solutions Architect | Problem Solver | Innovator</p>
+    </div>
+  </header>
+  <section id="projects" class="section">
+    <div class="case-study-container">
+      <div class="image-wrap">
+          <img src="images/apache.png" alt="Apache Helicopter">
+      </div>
+      <p class="case-study-p">
+        The Aerial Weapons Scoring System (AWSS) II allows the training and qualification of aviation crews utilizing hardware devices that detect several
+        forms of shots from a helicopter.  AWSS II is a side-project to <a class="normal-font-link" href="tracr.html">TRACR</a>.  In terms of Domain-Driven-Design,
+        this project is a subdomain of <a class="normal-font-link" href="tracr.html">TRACR</a>.  There are three main weapons that are fired from an aviation
+        vehicle: Bullets, Lasers, and Rockets.  Each of these weapons have separate criteria for scoring but all use the same types of hardware sensors for
+        detecting hits.  Like 
+        <a class="normal-font-link" href="kdas.html">KDAS</a>, the same types of sensors are used for AWSS II.  As stated for
+        <a class="normal-font-link" href="kdas.html">KDAS</a>, I was tasked with developing an Interface Control Document (ICD) that allows the sensors to communicate
+        with the software system.  This required good communication between not only the vendor and myself, but for other stakeholders such as the customer and
+        the Project Manager.
+      </p>
+      <p class="case-study-p">
+        The problem space is that there is an existing solution however that solution has become too expensive to maintain and the hardware sensors are only
+        available from one vendor.  Therefore vendor lock-in became a major pain-point for the Army.  Additionally, other pain points were that the scoring
+        software itself has become end of life due to the age of the solution.  At the time of this writing, the current solution is almost two decades old.  Therefore,
+        the Army wanted a new solution that would both reduce cost of maintaining the sensors and software along with integration into the new
+        <a class="normal-font-link" href="tracr.html">TRACR</a> solution for seamless integration.  Due to the nature of where the application runs, there is no
+        internet connectivity therefore the entire solution is run on premises at a particular training range.  The reason for this is due to the weapons fired--
+        there must not be any structures, towns, etc. for miles.
+      </p>
+      <p class="case-study-p">
+        Since <a class="normal-font-link" href="tracr.html">TRACR</a> is an existing product, AWSS II had to conform to the overall Product Line that
+        <a class="normal-font-link" href="tracr.html">TRACR</a> is a part.  In order to facilitate that, I had to use
+        <a class="normal-font-link" target="_blank" href="https://sparxsystems.com/products/ea/">Enterprise Architect by Sparx</a> for modeling of the AWSS II subdomain.  We use
+        this tool to both model and export the domain models via Swagger files to be used in code generation.  The generated code adheres to the principles of
+        a microservice architecture.
+      </p>
+      <p class="case-study-p">
+        The actual technology used is Java on the back-end with Spring Boot.  The front-end consists of a Single Page Application (SPA) written in Angular.
+        The Product Line uses Postgres for the datastore and RabbitMQ for asynchronous communication from different microservices and to the user interface.
+      </p>
+  </section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, please reach out via email:</p>
+      <a href="mailto:cdbarrineau@icloud.com">cdbarrineau@icloud.com</a>
+      <p class="find-me-text">Or find me on the web at:</p>
+      <div class="social-icons">
+        <a class="social-icon" href="https://www.linkedin.com/in/david-barrineau/" target="_blank">
+          <img class="linkedin-icon" src="images/LI-In-Bug.png">
+        </a>
+        <a class="social-icon" href="https://medium.com/@david.barrineau_14226" target="_blank">
+          <img class="medium-icon" src="images/Medium-Icon-Black.png">
+        </a>
+        <a class="social-icon" href="https://github.com/cdbarrineau" target="_blank">
+          <img class="git-hub-icon" src="images/github-mark.png">
+        </a>
+      </div>
+  </section>
+  <footer>
+      <p>&copy; 2025 David Barrineau | Solutions Architect</p>
+  </footer>
+  </div>
+</body>
+</html>
