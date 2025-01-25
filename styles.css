@@ -94,13 +94,13 @@ ul li {
 
 a {
   color: #333;
-  text-decoration: none;
+  /* text-decoration: none; */
   font-size: 1.2em;
 }
 
-a:hover {
+/* a:hover {
   text-decoration: underline;
-}
+} */
 
 .normal-font-link {
   font-size: 1.1em;
@@ -176,7 +176,7 @@ footer {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-            padding: 20px;
+  padding: 20px;
 }
 
 /* Image with text wrapping */
