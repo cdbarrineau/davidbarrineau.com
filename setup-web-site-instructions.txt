@@ -1,0 +1,20 @@
+1) Create a simple bucket, name does not matter.
+2) Upload files to bucket.
+3) In Cert Manager
+  - Create cert, fully qualified name is name of the website (davindbarrineau.com)
+  - Use DNS validation, email doesn't work all that well.
+  - Request the cert.
+  - Go to the cert and click on "Create record in Route 53".  Creates a CNAME in hosted zone.  This is only used for cert validation.  Wait till cert is "Issued".
+4) Cloud Front, create distro.
+  - Select "Origin Access Control"
+  - Click "Create control setting"
+  - Click "Create"
+  - Redirect http -> https
+  - Click "Add item" in Alternate Domain Name and copy the domain name.
+  - Choose SSL cert.
+  - enter index.html as default root obj.
+5) Copy Policy and put in the copied code into bucket
+6) Once cloud front disto, go to Route 53
+7) Delete CNAME in hosted zone.
+8) Create the Alias record pointing to cloud front.
+
