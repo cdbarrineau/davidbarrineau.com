@@ -1,7 +1,7 @@
 1) Create a simple bucket, name does not matter.
 2) Upload files to bucket.
 3) In Cert Manager
-  - Create cert, fully qualified name is name of the website (davindbarrineau.com)
+  - Create cert, fully qualified name is name of the website (davidbarrineau.com)
   - Use DNS validation, email doesn't work all that well.
   - Request the cert.
   - Go to the cert and click on "Create record in Route 53".  Creates a CNAME in hosted zone.  This is only used for cert validation.  Wait till cert is "Issued".
